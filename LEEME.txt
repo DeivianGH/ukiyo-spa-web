@@ -1,0 +1,35 @@
+UKIYO SPA — PÁGINA WEB
+
+ARCHIVOS
+- index.html: estructura y contenido.
+- styles.css: diseño, colores y adaptación a celulares.
+- script.js: precios, servicios, cálculo del total y botón de WhatsApp.
+
+ANTES DE PUBLICAR
+1. Abre script.js en un editor de texto o Visual Studio Code.
+2. Al comienzo del archivo, cambia WHATSAPP_NUMBER por el número real de Ukiyo Spa con código de país y solo números. Ejemplo ficticio de Colombia: 573001234567.
+3. En PLANS cambia los nombres, descripciones, precios y fotos de ejemplo.
+4. En DURATIONS cambia los precios por tiempo adicional.
+5. En EXTRAS cambia los complementos y sus precios.
+6. En PROMOTIONS cambia o elimina las promociones de ejemplo.
+7. Guarda los archivos y prueba index.html en un navegador.
+
+PRECIOS
+Los precios incluidos son ejemplos ficticios. Revisa todos antes de publicar.
+El total es una estimación y no se cobra dinero en la página.
+
+PUBLICACIÓN GRATUITA CON GITHUB PAGES
+1. Crea una cuenta en https://github.com/
+2. Crea un repositorio público, por ejemplo ukiyo-spa-web.
+3. Sube index.html, styles.css y script.js a la raíz del repositorio.
+4. En el repositorio entra a Settings > Pages.
+5. En Build and deployment, selecciona Deploy from a branch.
+6. Elige la rama main y la carpeta /(root), y guarda.
+7. Espera a que GitHub publique el sitio. La dirección normalmente será https://TU-USUARIO.github.io/ukiyo-spa-web/
+8. Cuando actualices los archivos en GitHub, la web se actualizará tras el nuevo despliegue.
+
+IMPORTANTE
+- GitHub Pages es adecuado para publicar un sitio estático, pero revisa sus condiciones vigentes y asegúrate de que el uso de tu sitio cumple esas condiciones.
+- El enlace de WhatsApp no envía automáticamente el mensaje: abre WhatsApp con el texto preparado y el cliente debe pulsar Enviar.
+- Las imágenes de ejemplo son enlaces externos. Para mayor control, reemplázalas por fotos propias autorizadas.
+- No hay pagos en línea, base de datos ni gestión automática de reservas en esta versión.

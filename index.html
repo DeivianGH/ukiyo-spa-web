@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Arma tu experiencia en Ukiyo Spa. Elige tu plan, añade servicios y solicita tu reserva por WhatsApp.">
+  <title>Ukiyo Spa | Arma tu experiencia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Ukiyo Spa, inicio">
+      <span class="brand-mark">悠</span>
+      <span class="brand-name">UKIYO <small>SPA</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#planes">Planes</a>
+      <a href="#extras">Complementos</a>
+      <a href="#como-funciona">Cómo funciona</a>
+    </nav>
+    <a class="header-whatsapp" id="headerWhatsapp" href="#configurador">Hablemos por WhatsApp <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">TU MOMENTO · TU PLAN</p>
+        <h1>Regálate una pausa.<br><em>Arma tu experiencia.</em></h1>
+        <p class="hero-copy">Elige tu plan, personaliza los detalles y descubre el precio estimado al instante. Nosotros te ayudamos a coordinar tu visita.</p>
+        <a class="button button-light" href="#configurador">Crear mi plan <span>↓</span></a>
+      </div>
+      <div class="hero-note"><span class="note-dot"></span> Tu experiencia, a tu manera</div>
+    </section>
+
+    <section class="intro section-wrap" id="planes">
+      <div>
+        <p class="eyebrow eyebrow-dark">UNA EXPERIENCIA A TU MEDIDA</p>
+        <h2>¿Cómo te gustaría<br><em>desconectarte?</em></h2>
+      </div>
+      <p class="intro-copy">Empieza por un plan base y añade los detalles que más te gusten. El total se actualiza automáticamente; el precio final y la disponibilidad se confirman con nuestro equipo.</p>
+    </section>
+
+    <section class="builder section-wrap" id="configurador">
+      <div class="builder-main">
+        <section class="builder-section">
+          <div class="section-heading">
+            <span class="step-number">01</span>
+            <div><h3>Elige tu plan</h3><p>Selecciona la experiencia para empezar.</p></div>
+          </div>
+          <div class="plan-grid" id="planGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="builder-section">
+          <div class="section-heading">
+            <span class="step-number">02</span>
+            <div><h3>Personaliza la duración</h3><p>Elige cuántas horas de masaje deseas.</p></div>
+          </div>
+          <div class="duration-options" id="durationOptions"></div>
+          <p class="helper-text">La duración y el valor final se confirman con el equipo de Ukiyo Spa.</p>
+        </section>
+
+        <section class="builder-section" id="extras">
+          <div class="section-heading">
+            <span class="step-number">03</span>
+            <div><h3>Añade tus favoritos</h3><p>Agrega bebidas, cócteles y otros detalles a tu experiencia.</p></div>
+          </div>
+          <div id="extrasGroups" class="extras-groups"></div>
+        </section>
+
+        <section class="builder-section">
+          <div class="section-heading">
+            <span class="step-number">04</span>
+            <div><h3>Déjanos tus datos</h3><p>Así podremos responderte y coordinar la reserva.</p></div>
+          </div>
+          <div class="contact-fields">
+            <label>Tu nombre <span>(opcional)</span><input id="customerName" type="text" autocomplete="name" placeholder="¿Cómo te llamas?"></label>
+            <label>Fecha que prefieres <span>(opcional)</span><input id="preferredDate" type="date"></label>
+            <label>Horario preferido <span>(opcional)</span>
+              <select id="preferredTime">
+                <option value="">Aún no lo sé</option>
+                <option>Mañana</option><option>Tarde</option><option>Noche</option>
+              </select>
+            </label>
+            <label>Notas para el equipo <span>(opcional)</span><textarea id="customerNotes" rows="3" placeholder="Cuéntanos si tienes alguna preferencia..."></textarea></label>
+          </div>
+        </section>
+      </div>
+
+      <aside class="summary-card">
+        <div class="summary-top">
+          <p class="eyebrow">TU SELECCIÓN</p>
+          <h3>Tu plan Ukiyo</h3>
+          <p class="summary-subtitle">Una experiencia hecha a tu medida.</p>
+        </div>
+        <div id="summaryItems" class="summary-items"></div>
+        <div class="total-row"><span>Total estimado</span><strong id="totalPrice">$0</strong></div>
+        <p class="summary-disclaimer">Este valor es una estimación basada en tu selección. No se realiza ningún pago en esta página. Confirmaremos disponibilidad, detalles y precio final por WhatsApp.</p>
+        <button class="button button-whatsapp" id="sendWhatsapp" type="button"><span class="wa-icon">◉</span> Enviar plan por WhatsApp <span>↗</span></button>
+        <p class="privacy-note">Al continuar, WhatsApp se abrirá con el resumen de tu plan para que puedas revisarlo y enviárnoslo.</p>
+        <button class="text-button" id="clearSelection" type="button">Empezar de nuevo</button>
+        <div class="summary-perks"><span>✧ Atención personalizada</span><span>✧ Reserva por WhatsApp</span><span>✧ Sin pagos en línea</span></div>
+      </aside>
+    </section>
+
+    <section class="how section-wrap" id="como-funciona">
+      <p class="eyebrow eyebrow-dark">SENCILLO Y PERSONALIZADO</p>
+      <h2>Tu momento comienza<br><em>con tres pasos.</em></h2>
+      <div class="how-grid">
+        <article><span>01</span><h3>Arma tu plan</h3><p>Elige una experiencia y añade tus complementos favoritos.</p></article>
+        <article><span>02</span><h3>Revisa el total</h3><p>El precio estimado se actualiza mientras personalizas tu selección.</p></article>
+        <article><span>03</span><h3>Escríbenos</h3><p>Envía el resumen por WhatsApp y coordinamos contigo la disponibilidad.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">悠</span><span class="brand-name">UKIYO <small>SPA</small></span></a>
+    <p>“Un espacio para bajar el ritmo y volver a ti.”</p>
+    <span class="footer-small">© <span id="currentYear"></span> Ukiyo Spa. Todos los derechos reservados.</span>
+  </footer>
+</body>
+</html>
