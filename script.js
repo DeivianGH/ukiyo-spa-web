@@ -7,21 +7,24 @@
 // 1) CAMBIA ESTE NÚMERO por el WhatsApp del negocio.
 //    Incluye código de país, solo números. Colombia = 57.
 //    Ejemplo ficticio: 573001234567
-const WHATSAPP_NUMBER = "573000000000";
+const WHATSAPP_NUMBER = "573213706726";
 
 // 2) EDITA AQUÍ los planes, sus precios, descripciones e imágenes.
-//    Puedes usar imágenes propias o enlaces públicos de imágenes.
+//    Para usar una foto de tu computador: súbela al repositorio GitHub dentro de images/planes/ y escribe su ruta, por ejemplo:
+//    image: "images/planes/experiencia-romantica.jpg"
+//    También puedes usar una URL pública completa que empiece por https://. Deja image: "" para mostrar el recuadro vacío.
+//    Para cambiar una imagen más adelante, cambia solo el texto entre comillas de image.
 const PLANS = [
-  { id: "romantica-2x1", name: "Experiencia Romántica 2x1", description: "Una escapada para compartir y disfrutar juntos.", duration: "3 horas", price: 480000, image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80", details: ["Masaje completo de 1 hora para la experiencia 2x1", "Jacuzzi y sauna", "Platos fuertes y bebidas a la carta"] },
-  { id: "romantico", name: "Plan Romántico", description: "Un ritual de bienestar en un espacio íntimo.", duration: "2 horas", price: 300000, image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80", details: ["Masaje en espalda, cuello y gemelos", "Masaje japonés capilar y facial", "Piedras calientes, reflexología en manos y pies", "Aromaterapia, chocolaterapia facial y exfoliación corporal", "Jacuzzi privado y decoración romántica: pétalos, globos, luces, velas, mensaje y música a elección"] },
-  { id: "aniversario", name: "Plan Aniversario", description: "Un detalle especial para celebrar su historia.", duration: "1 hora y 30 minutos", price: 250000, image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante de 30 minutos", "Jacuzzi privado y decoración romántica", "Pétalos, globos, velas, mensaje y música", "Fresas con crema y 2 limonadas (Cocó o Cereza)"] },
-  { id: "romantica-plena", name: "Experiencia Romántica Plena", description: "Bienestar, privacidad y cena para dos.", duration: "3 horas", price: 500000, image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80", details: ["Masajes en espalda, cuello y gemelos; japonés capilar y facial", "Piedras calientes, reflexología, aromaterapia y chocolaterapia facial", "Exfoliación corporal", "Jacuzzi y sauna privados", "Decoración romántica completa con pétalos, globos, luces, velas, mensaje y música", "Cena a elegir: Bistec al romance rojo (salsa de vino y champiñones) o Tentación de maracuyá (pechuga a la plancha en salsa de maracuyá), con puré cremoso, ensalada frutal y bebida"] },
-  { id: "romantica-vip", name: "Experiencia Romántica Plena VIP", description: "Un ritual extendido con detalles exclusivos.", duration: "4 horas", price: 800000, image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80", details: ["Masaje de tejido profundo en espalda", "Masaje japonés capilar y facial; masaje de cuello y gemelos", "Pindas herbales calientes y toallas herbales calientes", "Reflexología en manos y pies", "Exfoliación con sales minerales y barro cromático en todo el cuerpo", "Exfoliación corporal", "Jacuzzi y sauna privados, decoración romántica", "2 platos especiales a la carta y bebida de bienvenida"] },
-  { id: "romantico-dos", name: "Plan Romántico para Dos", description: "Una pausa compartida entre semana.", duration: "2 horas · lunes a viernes", price: 150000, image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante para dos", "Jacuzzi privado", "Copa de vino espumoso", "Antifaz relajante, aromaterapia y ambiente romántico", "Precio indicado por pareja; válido de lunes a viernes"] },
-  { id: "amigas", name: "Día de Amigas", description: "Un momento de descanso para disfrutar juntas.", duration: "1 hora y 30 minutos", price: 250000, image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante de 30 minutos", "Jacuzzi", "Fresas con crema", "2 limonadas (Cocó o Cereza)"] },
-  { id: "enamorar", name: "Plan para Enamorar", description: "Calidez, cuidado y pequeños placeres.", duration: "2 horas", price: 350000, image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80", details: ["Masaje con pindas herbales calientes en todo el cuerpo", "Masaje relajante periorbitario, facial y capilar", "Masaje de pies en decúbito supino", "Exfoliación", "Fresas con crema y 2 limonadas (Cocó o Cereza)"] },
-  { id: "grupal", name: "Experiencia Relajante / Grupal", description: "Un ritual de bienestar para compartir en grupo.", duration: "2 horas", price: 300000, image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80", details: ["Masajes en espalda, cuello y gemelos; japonés capilar y facial", "Piedras calientes, reflexología, aromaterapia", "Chocolaterapia facial y exfoliación corporal", "Jacuzzi; decoración opcional", "Tarifas: 2 personas $300.000 · 3 personas $450.000 · 4 personas $600.000"] },
-  { id: "cumpleanos", name: "Regalo Cumpleaños", description: "Celebra con relajación y un detalle inolvidable.", duration: "2 horas", price: 150000, image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante y reflexología en manos y pies", "Jacuzzi y sauna", "Copa de helado con velita y canción", "Decoración cumpleañera incluida: mensaje, tarjeta, globos, banda, corona y canción"] }
+  { id: "romantica-2x1", name: "Experiencia Romántica 2x1", description: "Una escapada para compartir y disfrutar juntos.", duration: "3 horas", price: 480000, image: "", details: ["Masaje completo de 1 hora para la experiencia 2x1", "Jacuzzi y sauna", "Platos fuertes y bebidas a la carta"] },
+  { id: "romantico", name: "Plan Romántico", description: "Un ritual de bienestar en un espacio íntimo.", duration: "2 horas", price: 300000, image: "", details: ["Masaje en espalda, cuello y gemelos", "Masaje japonés capilar y facial", "Piedras calientes, reflexología en manos y pies", "Aromaterapia, chocolaterapia facial y exfoliación corporal", "Jacuzzi privado y decoración romántica: pétalos, globos, luces, velas, mensaje y música a elección"] },
+  { id: "aniversario", name: "Plan Aniversario", description: "Un detalle especial para celebrar su historia.", duration: "1 hora y 30 minutos", price: 250000, image: "", details: ["Masaje relajante de 30 minutos", "Jacuzzi privado y decoración romántica", "Pétalos, globos, velas, mensaje y música", "Fresas con crema y 2 limonadas (Cocó o Cereza)"] },
+  { id: "romantica-plena", name: "Experiencia Romántica Plena", description: "Bienestar, privacidad y cena para dos.", duration: "3 horas", price: 500000, image: "", details: ["Masajes en espalda, cuello y gemelos; japonés capilar y facial", "Piedras calientes, reflexología, aromaterapia y chocolaterapia facial", "Exfoliación corporal", "Jacuzzi y sauna privados", "Decoración romántica completa con pétalos, globos, luces, velas, mensaje y música", "Cena a elegir: Bistec al romance rojo (salsa de vino y champiñones) o Tentación de maracuyá (pechuga a la plancha en salsa de maracuyá), con puré cremoso, ensalada frutal y bebida"] },
+  { id: "romantica-vip", name: "Experiencia Romántica Plena VIP", description: "Un ritual extendido con detalles exclusivos.", duration: "4 horas", price: 800000, image: "", details: ["Masaje de tejido profundo en espalda", "Masaje japonés capilar y facial; masaje de cuello y gemelos", "Pindas herbales calientes y toallas herbales calientes", "Reflexología en manos y pies", "Exfoliación con sales minerales y barro cromático en todo el cuerpo", "Exfoliación corporal", "Jacuzzi y sauna privados, decoración romántica", "2 platos especiales a la carta y bebida de bienvenida"] },
+  { id: "romantico-dos", name: "Plan Romántico para Dos", description: "Una pausa compartida entre semana.", duration: "2 horas · lunes a viernes", price: 150000, image: "", details: ["Masaje relajante para dos", "Jacuzzi privado", "Copa de vino espumoso", "Antifaz relajante, aromaterapia y ambiente romántico", "Precio indicado por pareja; válido de lunes a viernes"] },
+  { id: "amigas", name: "Día de Amigas", description: "Un momento de descanso para disfrutar juntas.", duration: "1 hora y 30 minutos", price: 250000, image: "", details: ["Masaje relajante de 30 minutos", "Jacuzzi", "Fresas con crema", "2 limonadas (Cocó o Cereza)"] },
+  { id: "enamorar", name: "Plan para Enamorar", description: "Calidez, cuidado y pequeños placeres.", duration: "2 horas", price: 350000, image: "", details: ["Masaje con pindas herbales calientes en todo el cuerpo", "Masaje relajante periorbitario, facial y capilar", "Masaje de pies en decúbito supino", "Exfoliación", "Fresas con crema y 2 limonadas (Cocó o Cereza)"] },
+  { id: "grupal", name: "Experiencia Relajante / Grupal", description: "Un ritual de bienestar para compartir en grupo.", duration: "2 horas", price: 300000, image: "", details: ["Masajes en espalda, cuello y gemelos; japonés capilar y facial", "Piedras calientes, reflexología, aromaterapia", "Chocolaterapia facial y exfoliación corporal", "Jacuzzi; decoración opcional", "Tarifas: 2 personas $300.000 · 3 personas $450.000 · 4 personas $600.000"] },
+  { id: "cumpleanos", name: "Regalo Cumpleaños", description: "Celebra con relajación y un detalle inolvidable.", duration: "2 horas", price: 150000, image: "", details: ["Masaje relajante y reflexología en manos y pies", "Jacuzzi y sauna", "Copa de helado con velita y canción", "Decoración cumpleañera incluida: mensaje, tarjeta, globos, banda, corona y canción"] }
 ];
 
 // 3) PRECIO DE CADA DURACIÓN EXTRA.
@@ -108,12 +111,14 @@ function renderPlans() {
   $("planGrid").innerHTML = PLANS.map((plan) => `
     <button class="plan-card ${plan.id === state.selectedPlanId ? "selected" : ""}" type="button"
       data-plan="${escapeHtml(plan.id)}" aria-pressed="${plan.id === state.selectedPlanId}">
-      <div class="plan-image" style="background-image:linear-gradient(0deg,rgba(15,25,18,.08),rgba(15,25,18,.02)),url('${escapeHtml(plan.image)}')"></div>
+      <div class="plan-image">
+        ${plan.image ? `<img src="${escapeHtml(plan.image)}" alt="Imagen de ${escapeHtml(plan.name)}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="plan-image-fallback" style="display:none">Añade aquí la imagen del plan</span>` : `<span class="plan-image-fallback">Añade aquí la imagen del plan</span>`}
+      </div>
       <div class="plan-body">
         <h4>${escapeHtml(plan.name)}</h4>
         <p>${escapeHtml(plan.description)}<br><small>${escapeHtml(plan.duration)} incluidos</small></p>
         <ul class="plan-details">${(plan.details || []).map((detail) => `<li>${escapeHtml(detail)}</li>`).join("")}</ul>
-        <div class="plan-bottom"><span class="plan-price">${money(plan.price)}</span><span class="select-indicator">✓</span></div>
+        <div class="plan-bottom"><span class="select-indicator">✓</span></div>
       </div>
     </button>`).join("");
   $("planGrid").querySelectorAll("[data-plan]").forEach((button) => {
@@ -266,12 +271,6 @@ $("clearSelection").addEventListener("click", () => {
   $("preferredTime").value = "";
   $("customerNotes").value = "";
   renderAll();
-});
-
-$("headerWhatsapp").addEventListener("click", (event) => {
-  // Este enlace lleva al configurador para que primero armen su plan.
-  event.preventDefault();
-  $("configurador").scrollIntoView({ behavior: "smooth" });
 });
 
 function renderAll() {

@@ -167,3 +167,130 @@ h2 em { color: var(--green); }
 .plan-body{display:flex;flex-direction:column;align-items:stretch;height:calc(100% - 180px)}
 .plan-bottom{margin-top:auto}
 @media(max-width:600px){.plan-details{font-size:.8rem}.plan-body{height:auto}}
+
+
+/* ==========================================================
+   REDISEÑO UKIYO WELLNESS HIDROSENSE — AZUL Y VERDE PETRÓLEO
+   ========================================================== */
+:root {
+  --ink: #12343a;
+  --ink-soft: #285057;
+  --green: #176b68;
+  --green-dark: #104b50;
+  --sage: #e2f0ed;
+  --cream: #f3f8f7;
+  --paper: #ffffff;
+  --muted: #62777a;
+  --line: #d8e5e4;
+  --gold: #c7ad78;
+  --petrol-blue: #123e52;
+  --petrol-green: #14756f;
+  --petrol-gradient: linear-gradient(125deg, #123e52 0%, #14756f 100%);
+  --shadow: 0 18px 55px rgba(18, 62, 82, .12);
+}
+.site-header, .site-footer { background: var(--petrol-gradient); }
+.brand-mark { border-color: rgba(255,255,255,.5); color: #d7f0e8; }
+.brand-name { letter-spacing: .04em; font-size: clamp(16px, 1.55vw, 22px); }
+.brand-name small { letter-spacing: .16em; font-size: 8px; }
+.header-whatsapp { background: linear-gradient(120deg, #e6f5f0, #d5ece7); color: #123e52; }
+.hero { background: var(--petrol-blue); }
+.hero::before { opacity: .38; }
+.hero-overlay { background: linear-gradient(90deg, rgba(10,35,48,.96) 0%, rgba(15,70,77,.78) 53%, rgba(15,92,91,.28) 100%); }
+.eyebrow { color: #c1e5dc; }
+.eyebrow-dark { color: var(--petrol-green); }
+.hero h1 em, h2 em { color: #7dc7b9; }
+.button-light { background: linear-gradient(120deg, #f0faf7, #d3eee6); color: #123e52; }
+.step-number { background: var(--petrol-gradient); }
+.plan-card { background: #fff; border-color: #d9e6e5; }
+.plan-card.selected { border-color: var(--petrol-green); box-shadow: 0 0 0 3px rgba(20,117,111,.12); }
+.plan-image { height: 185px; background: #f7fbfa; display: block; position: relative; overflow: hidden; }
+.plan-image img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.plan-image-fallback, .media-fallback { display: grid; place-items: center; width: 100%; height: 100%; min-height: 130px; padding: 20px; text-align: center; color: #477176; background: linear-gradient(135deg, #f8fbfa, #e9f4f1); font-size: 12px; letter-spacing: .04em; }
+.plan-image-fallback { position: absolute; inset: 0; }
+.plan-body { height: auto; min-height: 180px; }
+.plan-body h4 { color: #123e52; font-size: 16px; }
+.plan-body p { font-size: 13px; }
+.plan-details { font-size: .83rem; }
+.plan-bottom { justify-content: flex-end; }
+.plan-price { display: none !important; }
+.select-indicator { border-color: #a8c9c5; }
+.selected .select-indicator { background: var(--petrol-gradient); border-color: var(--petrol-green); }
+.duration-option.selected { border-color: var(--petrol-green); background: #edf8f5; }
+.duration-option strong { color: var(--petrol-green); }
+.extra-card.selected { border-color: var(--petrol-green); background: #f0f8f6; }
+.extra-emoji { background: #e3f1ee; }
+.contact-fields input:focus, .contact-fields select:focus, .contact-fields textarea:focus { border-color: var(--petrol-green); box-shadow: 0 0 0 3px rgba(20,117,111,.12); }
+.summary-card { background: var(--petrol-gradient); }
+.button-whatsapp { background: linear-gradient(120deg, #e1f5ef, #c6e9df); color: #123e52; }
+.how-grid article { border-color: var(--line); background: linear-gradient(150deg, #fff, #f6fbfa); }
+.how-grid article > span { color: var(--petrol-green); }
+
+/* Nuevas secciones editoriales */
+.center-heading { max-width: 760px; margin: 0 auto 36px; text-align: center; }
+.center-heading h2 { margin: 0 0 14px; font-size: clamp(34px, 4vw, 48px); line-height: 1.12; }
+.center-heading h2 em { color: var(--petrol-green); }
+.center-heading > p:last-child { max-width: 600px; margin: 0 auto; color: var(--muted); line-height: 1.8; font-size: 14px; }
+.reviews { padding-top: 68px; padding-bottom: 76px; }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.review-card { padding: 26px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg,#fff,#f4faf8); box-shadow: 0 12px 30px rgba(18,62,82,.06); }
+.review-stars { color: #c49b47; letter-spacing: .18em; font-size: 18px; }
+.review-quote { min-height: 95px; margin: 18px 0; color: #315359; font-family: "Playfair Display",serif; font-size: 17px; line-height: 1.65; }
+.review-author { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.button-petrol { background: var(--petrol-gradient); color: white; box-shadow: 0 12px 25px rgba(18,62,82,.18); }
+.review-cta { display: flex; width: fit-content; max-width: 100%; margin: 30px auto 0; }
+.drinks { padding-top: 72px; padding-bottom: 78px; border-radius: 26px; background: linear-gradient(135deg,#eef7f5,#f8fbfa); }
+.drinks-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.drink-card { overflow: hidden; border: 1px solid #d6e6e2; border-radius: 19px; background: white; box-shadow: 0 12px 30px rgba(18,62,82,.07); }
+.drink-media { position: relative; height: 225px; overflow: hidden; background: #f7fbfa; }
+.drink-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.drink-media .media-fallback { display: none; position: absolute; inset: 0; }
+.drink-copy { padding: 23px; }
+.drink-kicker, .about-number { color: var(--petrol-green); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+.drink-copy h3 { margin: 9px 0; color: var(--petrol-blue); font: 600 22px "Playfair Display",serif; }
+.drink-copy p, .drinks-note { color: var(--muted); font-size: 13px; line-height: 1.8; }
+.drinks-note { margin: 24px 0 0; text-align: center; }
+.about { padding-top: 88px; padding-bottom: 70px; }
+.about-row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: clamp(28px,6vw,76px); margin: 0 0 48px; }
+.about-row-reverse .about-media { order: 2; }
+.about-row-reverse .about-copy { order: 1; }
+.about-media { min-height: 290px; height: clamp(290px,32vw,400px); position: relative; overflow: hidden; border-radius: 22px; background: #edf6f3; }
+.about-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-media .media-fallback { display: none; position: absolute; inset: 0; }
+.about-copy { max-width: 560px; padding: 15px 0; }
+.about-copy h3 { margin: 13px 0 15px; color: var(--petrol-blue); font: 500 clamp(29px,3vw,39px) "Playfair Display",serif; }
+.about-copy p { margin: 0; color: #4c666a; font-size: 15px; line-height: 1.95; }
+.care-promise { padding: 62px 22px 58px; text-align: center; color: white; background: var(--petrol-gradient); }
+.care-ornament { margin-bottom: 14px; color: #bfe8dc; font-size: 25px; }
+.care-promise p { max-width: 920px; margin: 0 auto 18px; font: 500 clamp(23px,3.3vw,36px)/1.5 "Playfair Display",serif; }
+.care-promise > span { color: #c3e5dc; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+.floating-whatsapp { position: fixed; z-index: 1000; right: 22px; bottom: 22px; display: inline-flex; align-items: center; gap: 10px; padding: 13px 18px; border: 1px solid rgba(255,255,255,.65); border-radius: 999px; color: #fff; background: linear-gradient(125deg,#123e52,#14756f); box-shadow: 0 12px 32px rgba(12,54,61,.28); font-size: 13px; font-weight: 700; }
+.floating-whatsapp > span:first-child { font-size: 20px; }
+.floating-whatsapp:hover { transform: translateY(-2px); }
+@media (max-width: 900px) {
+  .plan-image { height: 155px; }
+  .review-grid, .drinks-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .about-media { height: 310px; }
+}
+@media (max-width: 700px) {
+  .site-header { gap: 10px; }
+  .brand { gap: 7px; }
+  .brand-mark { width: 31px; height: 31px; font-size: 17px; flex: 0 0 auto; }
+  .brand-name { font-size: 15px; letter-spacing: 0; }
+  .brand-name small { font-size: 6px; letter-spacing: .1em; }
+  .header-whatsapp { max-width: 132px; white-space: normal; text-align: center; line-height: 1.3; }
+  .plan-image { height: 120px; }
+  .plan-body { min-height: 180px; }
+  .plan-body p { min-height: 0; }
+  .review-grid, .drinks-grid { grid-template-columns: 1fr; }
+  .review-card { padding: 22px; }
+  .review-quote { min-height: 0; }
+  .drinks { padding: 48px 18px; border-radius: 18px; }
+  .drink-media { height: 210px; }
+  .about { padding-top: 60px; padding-bottom: 40px; }
+  .about-row, .about-row-reverse { grid-template-columns: 1fr; gap: 18px; margin-bottom: 42px; }
+  .about-row-reverse .about-media, .about-row-reverse .about-copy { order: initial; }
+  .about-media { height: 250px; min-height: 250px; }
+  .about-copy p { font-size: 14px; }
+  .care-promise { padding: 44px 22px; }
+  .floating-whatsapp { right: 13px; bottom: 13px; padding: 11px 14px; }
+}
