@@ -30,3 +30,14 @@ El número configurado es 573213706726. Para cambiarlo, edita WHATSAPP_NUMBER al
 
 RESEÑAS
 Los textos de reseña incluidos son marcadores de posición. Sustitúyelos por reseñas auténticas de Google Maps antes de publicar.
+
+
+ACTUALIZACIÓN DE GALERÍAS
+- La sección de planes tiene exactamente 8 tarjetas.
+- Las tarjetas de planes ya no enlazan a WhatsApp: al hacer clic en una imagen cargada, se abre el lightbox.
+- El modal muestra la imagen completa con object-fit: contain; las tarjetas usan proporción uniforme y object-fit: cover.
+- Las 3 tarjetas de “Nuestra Carta & Gastronomía” también abren imágenes en el modal.
+- Las imágenes de “Conoce a Ukiyo” se pueden ampliar con un clic.
+- Cierra con el botón X, clic en el fondo oscuro o tecla Escape. En galerías funcionan las flechas izquierda/derecha.
+- Para cambiar fotos de planes, edita el campo image de cada objeto en script.js.
+- Para la carta, reemplaza las rutas de images/bebidas/ en index.html.

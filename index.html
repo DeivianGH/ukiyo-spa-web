@@ -21,7 +21,7 @@
       <a href="#quienes-somos">Conoce a Ukiyo</a>
       <a href="#planes">Planes</a>
       <a href="#resenas">Reseñas</a>
-      <a href="#bebidas">Carta de bebidas</a>
+      <a href="#bebidas">Nuestra carta</a>
     </nav>
     <a class="header-whatsapp" id="headerWhatsapp" href="https://wa.me/573213706726?text=Hola%2C%20Ukiyo%20Wellness%20Hidrosense.%20Quiero%20informaci%C3%B3n%20sobre%20sus%20experiencias." target="_blank" rel="noopener noreferrer">Hablemos por WhatsApp <span>↗</span></a>
   </header>
@@ -68,7 +68,7 @@
       <div class="center-heading">
         <p class="eyebrow eyebrow-dark">ENCUENTRA TU MOMENTO</p>
         <h2>Nuestros <em>planes</em></h2>
-        <p>Explora las experiencias visualmente y escríbenos para consultar detalles y disponibilidad.</p>
+        <p>Explora nuestra galería de experiencias.</p>
       </div>
       <!-- Para poner imágenes: sube tus fotos a images/planes/ y cambia image en script.js. No es necesario editar el HTML. -->
       <div class="plan-grid image-only-plan-grid" id="planGrid" aria-label="Catálogo visual de planes"></div>
@@ -90,9 +90,9 @@
 <!-- CARTA DE BEBIDAS: para añadir fotos, cambia el src de cada img por una ruta como images/bebidas/limonada.jpg. Sube esos archivos a una carpeta images/bebidas en GitHub. -->
     <section class="drinks section-wrap" id="bebidas">
       <div class="center-heading">
-        <p class="eyebrow eyebrow-dark">UN BRINDIS A TU BIENESTAR</p>
-        <h2>Carta de <em>bebidas</em></h2>
-        <p>Una selección para acompañar tu pausa. Consulta disponibilidad y opciones con nuestro equipo.</p>
+        <p class="eyebrow eyebrow-dark">SABORES PARA ACOMPAÑAR TU PAUSA</p>
+        <h2>Nuestra Carta <em>&amp; Gastronomía</em></h2>
+        <p>Descubre opciones para complementar tu experiencia de bienestar.</p>
       </div>
       <div class="drinks-grid">
         <article class="drink-card"><div class="drink-media"><img src="images/bebidas/limonadas.jpg" alt="Limonadas refrescantes" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Añade aquí tu foto</span></div><div class="drink-copy"><span class="drink-kicker">REFRESCANTE</span><h3>Limonadas de la casa</h3><p>Una opción fresca para disfrutar durante tu experiencia.</p></div></article>
@@ -108,5 +108,14 @@
     <span class="footer-small">© <span id="currentYear"></span> Ukiyo Wellness Hidrosense. Todos los derechos reservados.</span>
   </footer>
   <a class="floating-whatsapp" href="https://wa.me/573213706726?text=Hola%2C%20Ukiyo%20Wellness%20Hidrosense.%20Quiero%20consultar%20sus%20experiencias." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp"> <span aria-hidden="true">☏</span><span>WhatsApp</span></a>
+
+  <!-- Modal / lightbox compartido por las galerías de imágenes -->
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista ampliada de la imagen">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar imagen ampliada">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Imagen anterior">&#10094;</button>
+    <figure class="lightbox-figure"><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption></figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Imagen siguiente">&#10095;</button>
+  </div>
+
 </body>
 </html>

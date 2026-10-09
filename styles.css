@@ -320,3 +320,40 @@ h2 em { color: var(--green); }
   .image-only-plan-grid .plan-card { aspect-ratio: 3 / 4; border-radius: 13px; }
   .hero h1 { max-width: 650px; }
 }
+
+
+/* ACTUALIZACIÓN: LIGHTBOX, GALERÍAS UNIFORMES Y HERO PREMIUM */
+.hero { isolation:isolate; background:radial-gradient(ellipse at 78% 20%,rgba(77,153,139,.30),transparent 43%),linear-gradient(120deg,#071d2a 0%,#0d3e4b 48%,#0b514e 100%); }
+.hero::before { z-index:-2; opacity:.32; background-position:center 52%; filter:saturate(.72) contrast(1.08); }
+.hero-overlay { z-index:-1; background:linear-gradient(110deg,rgba(5,25,38,.97) 0%,rgba(8,49,60,.86) 46%,rgba(8,76,70,.48) 100%),radial-gradient(circle at 78% 35%,rgba(129,191,170,.16),transparent 42%); }
+.hero::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,rgba(5,25,38,.08),transparent 45%,rgba(4,26,35,.35)); z-index:-1; }
+.hero h1 em { color:#a6ded0; } .hero .eyebrow { color:#b9e1d7; } .hero-note { color:#e2f3ed; }
+.image-only-plan-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+.image-only-plan-grid .plan-card { appearance:none; display:block; position:relative; padding:0; width:100%; aspect-ratio:4/3; border:1px solid #d8e8e4; border-radius:18px; cursor:zoom-in; text-align:initial; color:inherit; background:#fff; overflow:hidden; box-shadow:0 10px 28px rgba(18,62,82,.07); }
+.image-only-plan-grid .plan-card:hover { transform:translateY(-3px); box-shadow:0 16px 35px rgba(18,62,82,.14); }
+.image-only-plan-grid .plan-image { display:block; position:relative; width:100%; height:100%; overflow:hidden; background:#fff; }
+.image-only-plan-grid .plan-image img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .45s ease; }
+.image-only-plan-grid .plan-card:hover .plan-image img { transform:scale(1.045); }
+.image-only-plan-grid .plan-image-fallback { display:grid; place-items:center; position:absolute; inset:0; background:linear-gradient(145deg,#f8fbfa,#e6f2ef); }
+.image-only-plan-grid .plan-image-fallback::after { content:""; width:42px; height:42px; border:1px solid #d3e5df; border-radius:50%; background:radial-gradient(circle at 35% 30%,#fff,#e3f1ec); }
+.image-only-plan-grid .plan-body { display:none!important; }
+.drinks-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.drink-media { position:relative; height:auto; aspect-ratio:4/3; overflow:hidden; cursor:zoom-in; background:#edf5f2; }
+.drink-media img { width:100%; height:100%; object-fit:cover; display:block; }
+.drink-media .media-fallback { display:grid; position:absolute; inset:0; }
+.drink-media img:not([src=""]) + .media-fallback { display:none; }
+.drink-copy { padding:19px 21px 22px; }
+.plan-card:focus-visible,.drink-media:focus-visible,.about-media:focus-visible { outline:3px solid #3a9186; outline-offset:4px; }
+body.lightbox-open { overflow:hidden; }
+.image-lightbox { position:fixed; inset:0; z-index:2000; display:none; align-items:center; justify-content:center; padding:clamp(18px,4vw,48px); background:rgba(3,12,18,.94); backdrop-filter:blur(9px); }
+.image-lightbox.is-open { display:flex; }
+.lightbox-figure { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; width:100%; height:100%; margin:0; }
+.lightbox-figure img { display:block; width:auto; height:auto; max-width:min(100%,1500px); max-height:calc(100dvh - 100px); object-fit:contain; object-position:center; border-radius:4px; box-shadow:0 24px 90px rgba(0,0,0,.38); }
+.lightbox-figure figcaption { max-width:min(90vw,800px); color:rgba(255,255,255,.78); text-align:center; font-size:12px; letter-spacing:.05em; }
+.lightbox-close { position:absolute; top:16px; right:22px; z-index:2; display:grid; place-items:center; width:46px; height:46px; border:1px solid rgba(255,255,255,.4); border-radius:50%; color:#fff; background:rgba(255,255,255,.09); font-size:32px; line-height:1; transition:background .2s,transform .2s; }
+.lightbox-close:hover { background:rgba(255,255,255,.2); transform:rotate(90deg); }
+.lightbox-nav { position:absolute; top:50%; z-index:2; display:grid; place-items:center; width:44px; height:54px; transform:translateY(-50%); border:1px solid rgba(255,255,255,.25); border-radius:12px; color:white; background:rgba(255,255,255,.08); font-size:22px; }
+.lightbox-prev { left:16px; } .lightbox-next { right:16px; } .lightbox-nav:hover { background:rgba(255,255,255,.18); }
+.lightbox-close:focus-visible,.lightbox-nav:focus-visible { outline:2px solid #a6ded0; outline-offset:3px; }
+@media(max-width:900px) { .image-only-plan-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .drinks-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .lightbox-prev { left:8px; } .lightbox-next { right:8px; } }
+@media(max-width:700px) { .image-only-plan-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; } .image-only-plan-grid .plan-card { aspect-ratio:4/3; } .drinks-grid { grid-template-columns:1fr; } .drink-media { aspect-ratio:4/3; } .image-lightbox { padding:64px 12px 28px; } .lightbox-figure img { max-width:100%; max-height:calc(100dvh - 135px); } .lightbox-close { top:10px; right:12px; } .lightbox-nav { width:36px; height:46px; font-size:18px; } .lightbox-prev { left:5px; } .lightbox-next { right:5px; } }
