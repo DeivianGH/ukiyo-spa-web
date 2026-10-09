@@ -12,38 +12,16 @@ const WHATSAPP_NUMBER = "573000000000";
 // 2) EDITA AQUÍ los planes, sus precios, descripciones e imágenes.
 //    Puedes usar imágenes propias o enlaces públicos de imágenes.
 const PLANS = [
-  {
-    id: "relajacion",
-    name: "Relajación",
-    description: "Una pausa para descansar y recargar energía.",
-    duration: "1 hora",
-    price: 150000,
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    id: "premium",
-    name: "Premium",
-    description: "Una experiencia especial para desconectarte.",
-    duration: "1 hora y 30 min",
-    price: 200000,
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    id: "intenso",
-    name: "Intenso",
-    description: "Más tiempo para disfrutar tu momento de bienestar.",
-    duration: "2 horas",
-    price: 300000,
-    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    id: "pareja",
-    name: "Experiencia en pareja",
-    description: "Un momento especial para compartir.",
-    duration: "2 horas",
-    price: 400000,
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80"
-  }
+  { id: "romantica-2x1", name: "Experiencia Romántica 2x1", description: "Una escapada para compartir y disfrutar juntos.", duration: "3 horas", price: 480000, image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80", details: ["Masaje completo de 1 hora para la experiencia 2x1", "Jacuzzi y sauna", "Platos fuertes y bebidas a la carta"] },
+  { id: "romantico", name: "Plan Romántico", description: "Un ritual de bienestar en un espacio íntimo.", duration: "2 horas", price: 300000, image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80", details: ["Masaje en espalda, cuello y gemelos", "Masaje japonés capilar y facial", "Piedras calientes, reflexología en manos y pies", "Aromaterapia, chocolaterapia facial y exfoliación corporal", "Jacuzzi privado y decoración romántica: pétalos, globos, luces, velas, mensaje y música a elección"] },
+  { id: "aniversario", name: "Plan Aniversario", description: "Un detalle especial para celebrar su historia.", duration: "1 hora y 30 minutos", price: 250000, image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante de 30 minutos", "Jacuzzi privado y decoración romántica", "Pétalos, globos, velas, mensaje y música", "Fresas con crema y 2 limonadas (Cocó o Cereza)"] },
+  { id: "romantica-plena", name: "Experiencia Romántica Plena", description: "Bienestar, privacidad y cena para dos.", duration: "3 horas", price: 500000, image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80", details: ["Masajes en espalda, cuello y gemelos; japonés capilar y facial", "Piedras calientes, reflexología, aromaterapia y chocolaterapia facial", "Exfoliación corporal", "Jacuzzi y sauna privados", "Decoración romántica completa con pétalos, globos, luces, velas, mensaje y música", "Cena a elegir: Bistec al romance rojo (salsa de vino y champiñones) o Tentación de maracuyá (pechuga a la plancha en salsa de maracuyá), con puré cremoso, ensalada frutal y bebida"] },
+  { id: "romantica-vip", name: "Experiencia Romántica Plena VIP", description: "Un ritual extendido con detalles exclusivos.", duration: "4 horas", price: 800000, image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80", details: ["Masaje de tejido profundo en espalda", "Masaje japonés capilar y facial; masaje de cuello y gemelos", "Pindas herbales calientes y toallas herbales calientes", "Reflexología en manos y pies", "Exfoliación con sales minerales y barro cromático en todo el cuerpo", "Exfoliación corporal", "Jacuzzi y sauna privados, decoración romántica", "2 platos especiales a la carta y bebida de bienvenida"] },
+  { id: "romantico-dos", name: "Plan Romántico para Dos", description: "Una pausa compartida entre semana.", duration: "2 horas · lunes a viernes", price: 150000, image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante para dos", "Jacuzzi privado", "Copa de vino espumoso", "Antifaz relajante, aromaterapia y ambiente romántico", "Precio indicado por pareja; válido de lunes a viernes"] },
+  { id: "amigas", name: "Día de Amigas", description: "Un momento de descanso para disfrutar juntas.", duration: "1 hora y 30 minutos", price: 250000, image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante de 30 minutos", "Jacuzzi", "Fresas con crema", "2 limonadas (Cocó o Cereza)"] },
+  { id: "enamorar", name: "Plan para Enamorar", description: "Calidez, cuidado y pequeños placeres.", duration: "2 horas", price: 350000, image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80", details: ["Masaje con pindas herbales calientes en todo el cuerpo", "Masaje relajante periorbitario, facial y capilar", "Masaje de pies en decúbito supino", "Exfoliación", "Fresas con crema y 2 limonadas (Cocó o Cereza)"] },
+  { id: "grupal", name: "Experiencia Relajante / Grupal", description: "Un ritual de bienestar para compartir en grupo.", duration: "2 horas", price: 300000, image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80", details: ["Masajes en espalda, cuello y gemelos; japonés capilar y facial", "Piedras calientes, reflexología, aromaterapia", "Chocolaterapia facial y exfoliación corporal", "Jacuzzi; decoración opcional", "Tarifas: 2 personas $300.000 · 3 personas $450.000 · 4 personas $600.000"] },
+  { id: "cumpleanos", name: "Regalo Cumpleaños", description: "Celebra con relajación y un detalle inolvidable.", duration: "2 horas", price: 150000, image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80", details: ["Masaje relajante y reflexología en manos y pies", "Jacuzzi y sauna", "Copa de helado con velita y canción", "Decoración cumpleañera incluida: mensaje, tarjeta, globos, banda, corona y canción"] }
 ];
 
 // 3) PRECIO DE CADA DURACIÓN EXTRA.
@@ -58,31 +36,28 @@ const DURATIONS = [
 // 4) EDITA AQUÍ bebidas, cócteles y otros complementos.
 //    price = precio por unidad; emoji = icono que aparece en la página.
 const EXTRAS = [
-  {
-    id: "bebidas",
-    title: "Bebidas",
-    items: [
-      { id: "agua", name: "Agua", description: "Agua embotellada", price: 5000, emoji: "💧" },
-      { id: "jugo", name: "Jugo natural", description: "Jugo de fruta", price: 8000, emoji: "🍹" },
-      { id: "refresco", name: "Refresco", description: "Bebida fría", price: 6000, emoji: "🥤" }
-    ]
-  },
-  {
-    id: "cocteles",
-    title: "Cócteles",
-    items: [
-      { id: "mojito", name: "Mojito sin alcohol", description: "Refrescante", price: 12000, emoji: "🌿" },
-      { id: "margarita", name: "Margarita sin alcohol", description: "Cítrica y fresca", price: 14000, emoji: "🍋" }
-    ]
-  },
-  {
-    id: "complementos",
-    title: "Complementos",
-    items: [
-      { id: "jacuzzi", name: "Tiempo adicional de jacuzzi", description: "Sujeto a disponibilidad", price: 40000, emoji: "🫧" },
-      { id: "decoracion", name: "Decoración especial", description: "Para una ocasión especial", price: 35000, emoji: "🕯️" }
-    ]
-  }
+  { id: "bebidas", title: "Bebidas y brindis", items: [
+    { id: "agua", name: "Agua embotellada", description: "Agua", price: 5000, emoji: "💧" },
+    { id: "jugo", name: "Jugo natural", description: "Fruta natural", price: 8000, emoji: "🍹" },
+    { id: "limonada", name: "Limonada Cocó o Cereza", description: "Elige tu sabor por WhatsApp", price: 10000, emoji: "🍋" },
+    { id: "vino", name: "Copa de vino espumoso", description: "Para brindar", price: 18000, emoji: "🥂" },
+    { id: "coctel", name: "Cóctel especial", description: "Consulta sabores disponibles", price: 22000, emoji: "🍸" },
+    { id: "mocktail", name: "Cóctel sin alcohol", description: "Refrescante y especial", price: 16000, emoji: "🍹" }
+  ]},
+  { id: "dulces", title: "Postres y detalles dulces", items: [
+    { id: "fresas", name: "Fresas con crema", description: "Porción adicional", price: 18000, emoji: "🍓" },
+    { id: "helado", name: "Copa de helado", description: "Un detalle dulce", price: 14000, emoji: "🍨" },
+    { id: "postre", name: "Postre de la casa", description: "Según disponibilidad", price: 20000, emoji: "🍰" },
+    { id: "chocolates", name: "Chocolates", description: "Para compartir", price: 15000, emoji: "🍫" }
+  ]},
+  { id: "bienestar", title: "Bienestar y ambiente", items: [
+    { id: "masajeextra", name: "Masaje adicional de 30 min", description: "Sujeto a disponibilidad", price: 45000, emoji: "💆‍♀️" },
+    { id: "jacuzzi", name: "Tiempo adicional de jacuzzi", description: "Sujeto a disponibilidad", price: 40000, emoji: "🫧" },
+    { id: "sauna", name: "Tiempo adicional de sauna", description: "Sujeto a disponibilidad", price: 35000, emoji: "♨️" },
+    { id: "decoracion", name: "Decoración romántica especial", description: "Para una ocasión especial", price: 35000, emoji: "🕯️" },
+    { id: "mensaje", name: "Mensaje personalizado", description: "Tarjeta con dedicatoria", price: 10000, emoji: "💌" },
+    { id: "antifaz", name: "Antifaz relajante", description: "Un detalle para descansar", price: 12000, emoji: "😌" }
+  ]}
 ];
 
 // 5) PROMOCIONES: el descuento se resta al total si se selecciona.
@@ -137,6 +112,7 @@ function renderPlans() {
       <div class="plan-body">
         <h4>${escapeHtml(plan.name)}</h4>
         <p>${escapeHtml(plan.description)}<br><small>${escapeHtml(plan.duration)} incluidos</small></p>
+        <ul class="plan-details">${(plan.details || []).map((detail) => `<li>${escapeHtml(detail)}</li>`).join("")}</ul>
         <div class="plan-bottom"><span class="plan-price">${money(plan.price)}</span><span class="select-indicator">✓</span></div>
       </div>
     </button>`).join("");

@@ -159,3 +159,11 @@ h2 em { color: var(--green); }
   .how-grid { grid-template-columns: 1fr; gap: 11px; }
   .site-footer { justify-content: center; text-align: center; }
 }
+
+/* Detalles de cada plan: listado compacto y elegante */
+.plan-details{margin:12px 0 16px;padding:0 0 0 17px;color:var(--muted,#686b61);font-size:.82rem;line-height:1.55;text-align:left}
+.plan-details li{margin:0 0 5px}
+.plan-card{height:100%;}
+.plan-body{display:flex;flex-direction:column;align-items:stretch;height:calc(100% - 180px)}
+.plan-bottom{margin-top:auto}
+@media(max-width:600px){.plan-details{font-size:.8rem}.plan-body{height:auto}}
