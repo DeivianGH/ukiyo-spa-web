@@ -335,6 +335,8 @@ h2 em { color: var(--green); }
 .image-only-plan-grid .plan-image img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .45s ease; }
 .image-only-plan-grid .plan-card:hover .plan-image img { transform:scale(1.045); }
 .image-only-plan-grid .plan-image-fallback { display:grid; place-items:center; position:absolute; inset:0; background:linear-gradient(145deg,#f8fbfa,#e6f2ef); }
+/* Oculta el marcador de carga cuando la imagen tiene una ruta; evita que tape la foto. */
+.image-only-plan-grid .plan-image img:not([src=""]) + .plan-image-fallback { display:none; }
 .image-only-plan-grid .plan-image-fallback::after { content:""; width:42px; height:42px; border:1px solid #d3e5df; border-radius:50%; background:radial-gradient(circle at 35% 30%,#fff,#e3f1ec); }
 .image-only-plan-grid .plan-body { display:none!important; }
 .drinks-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
