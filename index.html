@@ -12,138 +12,35 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <a class="brand" href="#" aria-label="Ukiyo Wellness Hidrosense, inicio">
       <span class="brand-mark">悠</span>
       <span class="brand-name">Ukiyo <small>WELLNESS HIDROSENSE</small></span>
     </a>
     <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#quienes-somos">Conoce a Ukiyo</a>
       <a href="#planes">Planes</a>
-      <a href="#extras">Complementos</a>
+      <a href="#resenas">Reseñas</a>
       <a href="#bebidas">Carta de bebidas</a>
-      <a href="#quienes-somos">Nosotros</a>
-      <a href="#como-funciona">Cómo funciona</a>
     </nav>
     <a class="header-whatsapp" id="headerWhatsapp" href="https://wa.me/573213706726?text=Hola%2C%20Ukiyo%20Wellness%20Hidrosense.%20Quiero%20informaci%C3%B3n%20sobre%20sus%20experiencias." target="_blank" rel="noopener noreferrer">Hablemos por WhatsApp <span>↗</span></a>
   </header>
-
   <main>
-    <section class="hero">
+<section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">BIENESTAR PARA DISFRUTAR Y REGALAR</p>
         <h1>Elige la experiencia<br><em>que quieres vivir o regalar</em></h1>
-        <p class="hero-copy">Elige tu plan, personaliza los detalles y descubre el precio estimado al instante. Nosotros te ayudamos a coordinar tu visita.</p>
-        <a class="button button-light" href="#configurador">Crear mi plan <span>↓</span></a>
+        <p class="hero-copy">Descubre experiencias de bienestar para disfrutar, compartir o sorprender a alguien especial.</p>
+        <a class="button button-light" href="#planes">Ver planes <span>↓</span></a>
       </div>
       <div class="hero-note"><span class="note-dot"></span> Tu experiencia, a tu manera</div>
     </section>
-
-    <section class="intro section-wrap" id="planes">
-      <div>
-        <p class="eyebrow eyebrow-dark">UNA EXPERIENCIA A TU MEDIDA</p>
-        <h2>¿Cómo te gustaría<br><em>desconectarte?</em></h2>
-      </div>
-      <p class="intro-copy">Empieza por un plan base y añade los detalles que más te gusten. El total se actualiza automáticamente; el precio final y la disponibilidad se confirman con nuestro equipo.</p>
-    </section>
-
-    <section class="builder section-wrap" id="configurador">
-      <div class="builder-main">
-        <section class="builder-section">
-          <div class="section-heading">
-            <span class="step-number">01</span>
-            <div><h3>Elige tu plan</h3><p>Selecciona la experiencia para empezar.</p></div>
-          </div>
-          <div class="plan-grid" id="planGrid" aria-live="polite"></div>
-        </section>
-
-        <section class="builder-section">
-          <div class="section-heading">
-            <span class="step-number">02</span>
-            <div><h3>Personaliza la duración</h3><p>Si deseas extender la experiencia, añade tiempo extra (opcional).</p></div>
-          </div>
-          <div class="duration-options" id="durationOptions"></div>
-          <p class="helper-text">La duración y el valor final se confirman con el equipo de Ukiyo Spa.</p>
-        </section>
-
-        <section class="builder-section" id="extras">
-          <div class="section-heading">
-            <span class="step-number">03</span>
-            <div><h3>Añade tus favoritos</h3><p>Añade copas, cócteles, postres, masajes y detalles especiales.</p></div>
-          </div>
-          <div id="extrasGroups" class="extras-groups"></div>
-        </section>
-
-        <section class="builder-section">
-          <div class="section-heading">
-            <span class="step-number">04</span>
-            <div><h3>Déjanos tus datos</h3><p>Así podremos responderte y coordinar la reserva.</p></div>
-          </div>
-          <div class="contact-fields">
-            <label>Tu nombre <span>(opcional)</span><input id="customerName" type="text" autocomplete="name" placeholder="¿Cómo te llamas?"></label>
-            <label>Fecha que prefieres <span>(opcional)</span><input id="preferredDate" type="date"></label>
-            <label>Horario preferido <span>(opcional)</span>
-              <select id="preferredTime">
-                <option value="">Aún no lo sé</option>
-                <option>Mañana</option><option>Tarde</option><option>Noche</option>
-              </select>
-            </label>
-            <label>Notas para el equipo <span>(opcional)</span><textarea id="customerNotes" rows="3" placeholder="Cuéntanos si tienes alguna preferencia..."></textarea></label>
-          </div>
-        </section>
-      </div>
-
-      <aside class="summary-card">
-        <div class="summary-top">
-          <p class="eyebrow">TU SELECCIÓN</p>
-          <h3>Tu plan Ukiyo</h3>
-          <p class="summary-subtitle">Una experiencia hecha a tu medida.</p>
-        </div>
-        <div id="summaryItems" class="summary-items"></div>
-        <div class="total-row"><span>Total estimado</span><strong id="totalPrice">$0</strong></div>
-        <p class="summary-disclaimer">Este valor es una estimación basada en tu selección. No se realiza ningún pago en esta página. Confirmaremos disponibilidad, detalles y precio final por WhatsApp.</p>
-        <button class="button button-whatsapp" id="sendWhatsapp" type="button"><span class="wa-icon">◉</span> Enviar plan por WhatsApp <span>↗</span></button>
-        <p class="privacy-note">Al continuar, WhatsApp se abrirá con el resumen de tu plan para que puedas revisarlo y enviárnoslo.</p>
-        <button class="text-button" id="clearSelection" type="button">Empezar de nuevo</button>
-        <div class="summary-perks"><span>✧ Atención personalizada</span><span>✧ Reserva por WhatsApp</span><span>✧ Sin pagos en línea</span></div>
-      </aside>
-    </section>
-
-    <!-- Nuestras reseñas: sustituye los textos de ejemplo por reseñas auténticas copiadas de Google Maps. No publiques testimonios ficticios. -->
-    <section class="reviews section-wrap" id="resenas">
-      <div class="center-heading">
-        <p class="eyebrow eyebrow-dark">LO QUE COMPARTEN NUESTROS VISITANTES</p>
-        <h2>Nuestras <em>Reseñas</em></h2>
-        <p>Conoce las opiniones de quienes han vivido una experiencia en Ukiyo.</p>
-      </div>
-      <div class="review-grid">
-        <article class="review-card"><div class="review-stars" aria-label="Cinco estrellas">★★★★★</div><p class="review-quote">“Pega aquí una reseña real de Google Maps y conserva las palabras originales de la persona.”</p><span class="review-author">Reseña real por añadir</span></article>
-        <article class="review-card"><div class="review-stars" aria-label="Cinco estrellas">★★★★★</div><p class="review-quote">“Puedes destacar aquí otra opinión auténtica de un visitante sobre su experiencia.”</p><span class="review-author">Reseña real por añadir</span></article>
-        <article class="review-card"><div class="review-stars" aria-label="Cinco estrellas">★★★★★</div><p class="review-quote">“Reemplaza este texto con una tercera reseña verificada antes de publicar la web.”</p><span class="review-author">Reseña real por añadir</span></article>
-      </div>
-      <a class="button button-petrol review-cta" href="https://www.google.com/maps/place/Ukiyo+spa%7C+masajes+%7C+jacuzzi+%7C+sauna/@4.5938885,-74.1222707,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9977257c903d:0x26f05dc695377ba1!8m2!3d4.5938885!4d-74.1196958!16s%2Fg%2F11x646_q6y?entry=ttu" target="_blank" rel="noopener noreferrer">Mira nuestras reseñas en Google Maps <span>↗</span></a>
-    </section>
-
-    <!-- CARTA DE BEBIDAS: para añadir fotos, cambia el src de cada img por una ruta como images/bebidas/limonada.jpg. Sube esos archivos a una carpeta images/bebidas en GitHub. -->
-    <section class="drinks section-wrap" id="bebidas">
-      <div class="center-heading">
-        <p class="eyebrow eyebrow-dark">UN BRINDIS A TU BIENESTAR</p>
-        <h2>Carta de <em>bebidas</em></h2>
-        <p>Una selección para acompañar tu pausa. Consulta disponibilidad y opciones con nuestro equipo.</p>
-      </div>
-      <div class="drinks-grid">
-        <article class="drink-card"><div class="drink-media"><img src="images/bebidas/limonadas.jpg" alt="Limonadas refrescantes" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Añade aquí tu foto</span></div><div class="drink-copy"><span class="drink-kicker">REFRESCANTE</span><h3>Limonadas de la casa</h3><p>Una opción fresca para disfrutar durante tu experiencia.</p></div></article>
-        <article class="drink-card"><div class="drink-media"><img src="images/bebidas/cocteles.jpg" alt="Cócteles de la casa" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Añade aquí tu foto</span></div><div class="drink-copy"><span class="drink-kicker">PARA COMPARTIR</span><h3>Cócteles y mocktails</h3><p>Alternativas con y sin alcohol, sujetas a disponibilidad.</p></div></article>
-        <article class="drink-card"><div class="drink-media"><img src="images/bebidas/bebidas-especiales.jpg" alt="Bebidas especiales" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Añade aquí tu foto</span></div><div class="drink-copy"><span class="drink-kicker">DETALLES ESPECIALES</span><h3>Bebidas para brindar</h3><p>Completa la ocasión con una bebida elegida para el momento.</p></div></article>
-      </div>
-      <p class="drinks-note">La carta, los ingredientes y la disponibilidad se confirman directamente con Ukiyo.</p>
-    </section>
-
-    <!-- SECCIONES INFORMATIVAS. Para cambiar una imagen: 1) sube tu foto a GitHub; 2) guarda la imagen dentro de images/nosotros/; 3) cambia el atributo src de la etiqueta img por la ruta nueva o una URL pública https://... -->
+<!-- SECCIONES INFORMATIVAS. Para cambiar una imagen: 1) sube tu foto a GitHub; 2) guarda la imagen dentro de images/nosotros/; 3) cambia el atributo src de la etiqueta img por la ruta nueva o una URL pública https://... -->
     <section class="about section-wrap" id="quienes-somos">
       <div class="center-heading">
         <p class="eyebrow eyebrow-dark">CONOCE UKIYO</p>
-        <h2>Bienestar que se siente,<br><em>detalles que permanecen.</em></h2>
+        <h2>Conoce a <em>Ukiyo</em></h2>
       </div>
       <article class="about-row">
         <div class="about-media"><img src="images/nosotros/quienes-somos.jpg" alt="Espacio de bienestar de Ukiyo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Imagen de nuestro espacio</span></div>
@@ -162,25 +59,50 @@
         <div class="about-copy"><span class="about-number">04 · EL VALOR DE ELEGIR UKIYO</span><h3>Qué logras al regalar un plan exclusivamente con nosotros</h3><p>Ofreces una experiencia que puede personalizarse con masajes, jacuzzi, sauna y detalles para la ocasión, según el plan elegido. Además de un regalo, entregas una pausa para desconectarse de la rutina y crear recuerdos juntos. Nuestro equipo te orienta para coordinar los detalles y hacer que el gesto tenga un significado propio.</p></div>
       </article>
     </section>
-
-    <section class="care-promise" aria-label="Nuestro compromiso con la atención y la limpieza">
+<section class="care-promise" aria-label="Nuestro compromiso con la atención y la limpieza">
       <div class="care-ornament">✦</div>
       <p>“Nuestro personal es educado, respetuoso y amable. Nuestras áreas son totalmente pulcras, impecables y limpias.”</p>
       <span>El cuidado está en cada detalle</span>
     </section>
-
-    <section class="how section-wrap" id="como-funciona">
-      <p class="eyebrow eyebrow-dark">SENCILLO Y PERSONALIZADO</p>
-      <h2>Tu momento comienza<br><em>con tres pasos.</em></h2>
-      <div class="how-grid">
-        <article><span>01</span><h3>Arma tu plan</h3><p>Elige una experiencia y añade tus complementos favoritos.</p></article>
-        <article><span>02</span><h3>Revisa el total</h3><p>El precio estimado se actualiza mientras personalizas tu selección.</p></article>
-        <article><span>03</span><h3>Escríbenos</h3><p>Envía el resumen por WhatsApp y coordinamos contigo la disponibilidad.</p></article>
+<section class="plans-section section-wrap" id="planes">
+      <div class="center-heading">
+        <p class="eyebrow eyebrow-dark">ENCUENTRA TU MOMENTO</p>
+        <h2>Nuestros <em>planes</em></h2>
+        <p>Explora las experiencias visualmente y escríbenos para consultar detalles y disponibilidad.</p>
       </div>
+      <!-- Para poner imágenes: sube tus fotos a images/planes/ y cambia image en script.js. No es necesario editar el HTML. -->
+      <div class="plan-grid image-only-plan-grid" id="planGrid" aria-label="Catálogo visual de planes"></div>
+    </section>
+<!-- Antes de publicar: sustituye estos espacios por reseñas auténticas de Google Maps. No presentes ejemplos como opiniones reales. -->
+    <section class="reviews section-wrap" id="resenas">
+      <div class="center-heading">
+        <p class="eyebrow eyebrow-dark">LO QUE COMPARTEN NUESTROS VISITANTES</p>
+        <h2>Nuestras <em>Reseñas</em></h2>
+        <p>Conoce las opiniones de quienes han vivido una experiencia en Ukiyo.</p>
+      </div>
+      <div class="review-grid">
+        <article class="review-card"><div class="review-stars" aria-label="Cinco estrellas">★★★★★</div><p class="review-quote">Añade aquí el texto de una reseña auténtica de Google Maps.</p><span class="review-author">Opinión por añadir</span></article>
+        <article class="review-card"><div class="review-stars" aria-label="Cinco estrellas">★★★★★</div><p class="review-quote">Añade aquí una segunda reseña auténtica.</p><span class="review-author">Opinión por añadir</span></article>
+        <article class="review-card"><div class="review-stars" aria-label="Cinco estrellas">★★★★★</div><p class="review-quote">Añade aquí una tercera reseña auténtica.</p><span class="review-author">Opinión por añadir</span></article>
+      </div>
+      <a class="button button-petrol review-cta" href="https://www.google.com/maps/place/Ukiyo+spa%7C+masajes+%7C+jacuzzi+%7C+sauna/@4.5938885,-74.1222707,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9977257c903d:0x26f05dc695377ba1!8m2!3d4.5938885!4d-74.1196958!16s%2Fg%2F11x646_q6y?entry=ttu" target="_blank" rel="noopener noreferrer">Mira nuestras reseñas en Google Maps <span>↗</span></a>
+    </section>
+<!-- CARTA DE BEBIDAS: para añadir fotos, cambia el src de cada img por una ruta como images/bebidas/limonada.jpg. Sube esos archivos a una carpeta images/bebidas en GitHub. -->
+    <section class="drinks section-wrap" id="bebidas">
+      <div class="center-heading">
+        <p class="eyebrow eyebrow-dark">UN BRINDIS A TU BIENESTAR</p>
+        <h2>Carta de <em>bebidas</em></h2>
+        <p>Una selección para acompañar tu pausa. Consulta disponibilidad y opciones con nuestro equipo.</p>
+      </div>
+      <div class="drinks-grid">
+        <article class="drink-card"><div class="drink-media"><img src="images/bebidas/limonadas.jpg" alt="Limonadas refrescantes" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Añade aquí tu foto</span></div><div class="drink-copy"><span class="drink-kicker">REFRESCANTE</span><h3>Limonadas de la casa</h3><p>Una opción fresca para disfrutar durante tu experiencia.</p></div></article>
+        <article class="drink-card"><div class="drink-media"><img src="images/bebidas/cocteles.jpg" alt="Cócteles de la casa" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Añade aquí tu foto</span></div><div class="drink-copy"><span class="drink-kicker">PARA COMPARTIR</span><h3>Cócteles y mocktails</h3><p>Alternativas con y sin alcohol, sujetas a disponibilidad.</p></div></article>
+        <article class="drink-card"><div class="drink-media"><img src="images/bebidas/bebidas-especiales.jpg" alt="Bebidas especiales" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="media-fallback">Añade aquí tu foto</span></div><div class="drink-copy"><span class="drink-kicker">DETALLES ESPECIALES</span><h3>Bebidas para brindar</h3><p>Completa la ocasión con una bebida elegida para el momento.</p></div></article>
+      </div>
+      <p class="drinks-note">La carta, los ingredientes y la disponibilidad se confirman directamente con Ukiyo.</p>
     </section>
   </main>
-
-  <footer class="site-footer">
+<footer class="site-footer">
     <a class="brand footer-brand" href="#"><span class="brand-mark">悠</span><span class="brand-name">Ukiyo <small>WELLNESS HIDROSENSE</small></span></a>
     <p>“Un espacio para bajar el ritmo y volver a ti.”</p>
     <span class="footer-small">© <span id="currentYear"></span> Ukiyo Wellness Hidrosense. Todos los derechos reservados.</span>

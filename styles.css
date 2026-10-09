@@ -294,3 +294,29 @@ h2 em { color: var(--green); }
   .care-promise { padding: 44px 22px; }
   .floating-whatsapp { right: 13px; bottom: 13px; padding: 11px 14px; }
 }
+
+
+/* ==========================================================
+   ACTUALIZACIÓN: ESTRUCTURA SIMPLIFICADA Y PLANES SOLO CON IMAGEN
+   ========================================================== */
+.plans-section { padding-top: 76px; padding-bottom: 82px; }
+.image-only-plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.image-only-plan-grid .plan-card { display: block; position: relative; width: 100%; min-width: 0; padding: 0; border: 1px solid #d9e6e5; border-radius: 18px; background: #fff; overflow: hidden; box-shadow: 0 10px 28px rgba(18,62,82,.07); aspect-ratio: 4 / 3; }
+.image-only-plan-grid .plan-card:hover { transform: translateY(-3px); box-shadow: 0 16px 35px rgba(18,62,82,.14); }
+.image-only-plan-grid .plan-image { width: 100%; height: 100%; min-height: 0; aspect-ratio: auto; background: #fff; }
+.image-only-plan-grid .plan-image img { width: 100%; height: 100%; object-fit: contain; display: block; background: #fff; }
+.image-only-plan-grid .plan-image-fallback { background: #fff; color: transparent; font-size: 0; }
+.image-only-plan-grid .plan-image-fallback::after { content: ""; width: 38px; height: 38px; border: 1px solid #dce9e7; border-radius: 50%; background: linear-gradient(135deg,#f7fbfa,#edf6f3); opacity: .8; }
+.image-only-plan-grid .plan-body { display: none !important; }
+.care-promise { background: linear-gradient(120deg, #123e52 0%, #176b78 52%, #14756f 100%); }
+.about { padding-top: 78px; }
+.site-header { position: relative; }
+@media (max-width: 900px) { .image-only-plan-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; } }
+@media (max-width: 700px) {
+  .desktop-nav { display: none; }
+  .site-header { height: auto; min-height: 76px; padding-top: 12px; padding-bottom: 12px; }
+  .image-only-plan-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .plans-section { padding-top: 52px; padding-bottom: 56px; }
+  .image-only-plan-grid .plan-card { aspect-ratio: 3 / 4; border-radius: 13px; }
+  .hero h1 { max-width: 650px; }
+}

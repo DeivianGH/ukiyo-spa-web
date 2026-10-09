@@ -1,34 +1,32 @@
-UKIYO WELLNESS HIDROSENSE — ARCHIVOS DE LA PÁGINA
+UKIYO WELLNESS HIDROSENSE — VERSIÓN SIMPLIFICADA
 
-ARCHIVOS PRINCIPALES
-- index.html: contenido y estructura.
-- styles.css: colores, diseño, responsive e imágenes.
-- script.js: planes, precios internos, complementos y envío del resumen por WhatsApp.
+ARCHIVOS
+- index.html: estructura y contenido de la página.
+- styles.css: colores, diseño y adaptación a celular/computador.
+- script.js: catálogo visual de planes y enlaces de consulta por WhatsApp.
 
-SUBIR A GITHUB / CLOUDFLARE PAGES
-1. Abre el repositorio correcto de GitHub.
-2. Sube estos tres archivos en la raíz del repositorio y reemplaza los archivos con el mismo nombre.
-3. Confirma con Commit changes. Si Cloudflare Pages está conectado a ese repositorio y rama, publicará el cambio automáticamente.
-4. Abre la web publicada en móvil y computador para verificarla.
+ORDEN PRINCIPAL DE LA PÁGINA
+1. Hero / bienvenida
+2. Conoce a Ukiyo (Quiénes somos y apartados informativos)
+3. Franja azul de compromiso con atención y limpieza
+4. Catálogo visual de planes (solo tarjetas de imagen, sin precios ni textos visibles)
+5. Nuestras Reseñas y botón de Google Maps
+6. Carta de bebidas (se conserva después de las reseñas)
 
-IMÁGENES DE PLANES
-1. Crea una carpeta llamada images y dentro otra llamada planes.
-2. Sube las fotos a images/planes/ (por ejemplo experiencia-romantica.jpg).
-3. Abre script.js y busca el arreglo PLANS.
-4. En cada plan cambia image: "" por la ruta exacta, por ejemplo image: "images/planes/experiencia-romantica.jpg".
-5. Guarda y haz Commit changes. Las tarjetas mantienen un recuadro blanco si aún no has añadido una imagen.
+CAMBIAR IMÁGENES DE LOS PLANES
+1. En GitHub, crea la carpeta images/planes/ si no existe.
+2. Sube allí la fotografía desde tu computador.
+3. Abre script.js y busca el plan por su nombre.
+4. Cambia image: "" por una ruta, por ejemplo image: "images/planes/experiencia-romantica.jpg".
+5. Guarda el archivo y haz Commit changes. Cloudflare publicará la actualización si está conectado al repositorio.
 
-IMÁGENES DE INFORMACIÓN
-En index.html busca "SECCIONES INFORMATIVAS". Las rutas iniciales son images/nosotros/quienes-somos.jpg, por-que-elegirnos.jpg, regalar-experiencia.jpg y regalo-ukiyo.jpg. Crea la carpeta images/nosotros y sube allí las fotos con esos nombres, o cambia el src de cada img por tu ruta o URL pública.
+Las tarjetas son clicables y abren WhatsApp con una consulta sobre ese plan. El nombre solo se usa para accesibilidad y para construir el mensaje; no se muestra en la tarjeta.
 
-CARTA DE BEBIDAS
-En index.html busca "CARTA DE BEBIDAS". Las imágenes esperadas son images/bebidas/limonadas.jpg, cocteles.jpg y bebidas-especiales.jpg. Crea images/bebidas y sube las imágenes, o cambia el atributo src. Las imágenes se adaptan al espacio sin deformarse.
-
-RESEÑAS
-En index.html busca "Nuestras reseñas". Los textos actuales son marcadores de posición: reemplázalos por reseñas auténticas de Google Maps antes de publicar. No presentes los textos de ejemplo como opiniones reales. El botón abre el perfil indicado de Google Maps.
+CAMBIAR IMÁGENES INFORMATIVAS Y BEBIDAS
+En index.html, cambia el valor src de cada etiqueta img. Puedes usar una ruta relativa como images/nosotros/quienes-somos.jpg o una URL pública https://... Sube las imágenes a las carpetas correspondientes del repositorio.
 
 WHATSAPP
-El número configurado es +57 321 370 6726 (573213706726). El botón flotante abre el chat con un mensaje inicial. El botón dentro del configurador envía el resumen de la selección.
+El número configurado es 573213706726. Para cambiarlo, edita WHATSAPP_NUMBER al inicio de script.js (código de país + número, solo dígitos).
 
-IMPORTANTE
-Los precios internos del configurador siguen funcionando para el cálculo del resumen; no se muestran en las tarjetas de planes. Revisa los precios, servicios y disponibilidad antes de publicar.
+RESEÑAS
+Los textos de reseña incluidos son marcadores de posición. Sustitúyelos por reseñas auténticas de Google Maps antes de publicar.
