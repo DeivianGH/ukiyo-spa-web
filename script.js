@@ -1,13 +1,13 @@
 /* UKIYO WELLNESS HIDROSENSE — galería visual con modal. */
 const PLANS = [
-  { id: "romantica-2x1", name: "Experiencia Romántica 2x1", image: "images\planes\plan 1.jpeg" },
-  { id: "romantico", name: "Plan Romántico", image: "images\planes\plan 2.jpeg" },
-  { id: "aniversario", name: "Plan Aniversario", image: "images\planes\plan 3.jpeg" },
-  { id: "romantica-plena", name: "Experiencia Romántica Plena", image: "images\planes\plan 4.jpeg" },
-  { id: "romantica-vip", name: "Experiencia Romántica Plena VIP", image: "images\planes\plan 5.jpeg" },
-  { id: "romantico-dos", name: "Plan Romántico para Dos", image: "images\planes\plan 6.jpeg" },
-  { id: "amigas", name: "Día de Amigas", image: "images\planes\plan 7.jpeg" },
-  { id: "enamorar", name: "Plan para Enamorar", image: "images\planes\plan 8.jpeg" }
+  { id: "romantica-2x1", name: "Experiencia Romántica 2x1", image: "images/planes/plan-1.jpeg" },
+  { id: "romantico", name: "Plan Romántico", image: "images/planes/plan-2.jpeg" },
+  { id: "aniversario", name: "Plan Aniversario", image: "images/planes/plan-3.jpeg" },
+  { id: "romantica-plena", name: "Experiencia Romántica Plena", image: "images/planes/plan-4.jpeg" },
+  { id: "romantica-vip", name: "Experiencia Romántica Plena VIP", image: "images/planes/plan-5.jpeg" },
+  { id: "romantico-dos", name: "Plan Romántico para Dos", image: "images/planes/plan-6.jpeg" },
+  { id: "amigas", name: "Día de Amigas", image: "images/planes/plan-7.jpeg" },
+  { id: "enamorar", name: "Plan para Enamorar", image: "images/planes/plan-8.jpeg" }
 ];
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
